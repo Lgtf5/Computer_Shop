@@ -1,20 +1,16 @@
 package dev.lidia.MyComponent;
+import dev.lidia.MyComponent.Computer;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
-
-import dev.lidia.MyComponent.Computer;
-
 import java.util.List;
 
 
 
-
-
 public class ComputerShopTest {
-
 
     @Test
     @DisplayName ("testamos atributos de la clase ComputerShop")
@@ -27,13 +23,15 @@ public class ComputerShopTest {
         assertThat (tienda.getIdTributario(), is(123456789));
     }
 
+
     @Test
     @DisplayName ("testamos atributo array de la clase ComputerShop") 
 
     public void testGetterListComputadoras() {
-        ComputerShop tienda = new ComputerShop("Tienda1", "Jhon Doe", 123456789);
-        Computer computadora1 = new Computer("HP", "Pavilion", 8, 500, 1000);
-        Computer computadora2 = new Computer("Lenovo", "Thinkpad", 16, 1000, 1500);
+        ComputerShop tienda = new ComputerShop ("Tienda1", "Jhon Doe", 123456789);
+        Computer computadora1 = new Computer();
+        Computer computadora2 = new Computer();
+
         tienda.addComputer(computadora1);
         tienda.addComputer(computadora2);
 
