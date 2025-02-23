@@ -8,7 +8,7 @@ public class Computer {
     private String sistemaOperativo;
     private double precio;
     
-    public Computer() {
+    public Computer(String marca, int memoria, String procesador, String sistemaOperativo, double precio) {
         this.marca = marca;
         this.memoria = memoria;
         this.procesador = procesador;
